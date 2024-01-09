@@ -108,6 +108,7 @@ public class SubjectList {
 
 
 // Subjects for Software Engineering
+
 enum SubjectsFor1TermSoftwareEngineering {
     PROGRAMMING ("Programming"),
     WEB_PROGRAMMING_1 ("Web Programming 1"),
@@ -361,11 +362,96 @@ enum SubjectsFor4TermSoftwareTechnologiesAndDesign {
 }
 
 
+enum SubjectsFor5TermSoftwareTechnologiesAndDesign {
+    PUBLISHING_SYSTEMS ("Publishing systems"),
+    PRACTICE_IN_THE_SPECIALTY ("Practice in the specialty"),
+    VIDEO_AND_ANIMATION_CREATION_AND_PROCESSING ("Video and animation creation and processing"),
+    SOFTWARE_TECHNOLOGIES ("Software technologies 2"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+
+    private final String title;
+
+    SubjectsFor5TermSoftwareTechnologiesAndDesign(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermSoftwareTechnologiesAndDesign {
+    CREATION_AND_PROCESSING_OF_VECTOR_IMAGES ("Creation and processing of vector images"),
+    COMPUTER_NETWORKS_AND_COMMUNICATIONS ("Computer networks and communications"),
+    MOBILE_APPLICATION_DESIGN ("Mobile application design"),
+    MOBILE_APPLICATION_PROGRAMMING ("Mobile application programming"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+
+    private final String title;
+
+    SubjectsFor6TermSoftwareTechnologiesAndDesign(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermSoftwareTechnologiesAndDesign {
+    E_COMMERCE ("E-commerce"),
+    MODEL_DESIGN_3D ("3D model design"),
+    APPLIED_MATHEMATICS ("Applied mathematics 2"),
+    INFORMATION_TECHNOLOGIES_ON_THE_INTERNET ("Information technologies on the Internet"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+
+    private final String title;
+
+    SubjectsFor7TermSoftwareTechnologiesAndDesign(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermSoftwareTechnologiesAndDesign {
+    FRAMEWORK_SYSTEMS_FOR_WEB_PROGRAMMING ("Framework systems for web programming"),
+    BUSINESS_INFORMATION_SYSTEMS ("Business information systems"),
+    INTERNSHIP ("Internship"),
+    OPTIONAL_DISCIPLINE("Optional discipline");
+
+    private final String title;
+
+    SubjectsFor8TermSoftwareTechnologiesAndDesign(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+
+
 // Subjects for Business IT
+
 enum SubjectsFor1TermBusinessIT {
-    PYTHON ("Python"),
-    PHYSICS("Physics"),
-    COMPUTER_NETWORK("Computer network");
+    INTRODUCTION_TO_COMPUTER_SCIENCE ("Introduction to Computer Science"),
+    INTRODUCTION_TO_INFORMATION_TECHNOLOGY("Introduction to Information Technology"),
+    LINEAR_ALGEBRA_AND_ANALYTICAL_GEOMETRY("Linear algebra and analytical geometry"),
+    PROGRAMMING("Programming"),
+    LAW_AND_LEGAL_INFORMATION_SYSTEMS("Law and legal information systems"),
+    ENGLISH("English"),
+    SPORTS("Sports");
 
     private final String title;
 
@@ -380,13 +466,225 @@ enum SubjectsFor1TermBusinessIT {
 
 
 enum SubjectsFor2TermBusinessIT {
-    PYTHON ("Python"),
-    PHYSICS("Physics"),
-    COMPUTER_NETWORK("Computer network");
+    OOP ("Object oriented programming"),
+    INFORMATION_TECHNOLOGY_IN_MATHEMATICS("Information technology in mathematics"),
+    BANKING_AND_BANKING_INFORMATION_SYSTEMS("Banking and banking information systems"),
+    APPLIED_MATHEMATICS("Applied Mathematics"),
+    GRAPHICS_AND_PRESENTATIONS("Graphics and presentations"),
+    SPECIALIZED_ENGLISH("Specialized English"),
+    SPORTS("Sports");
 
     private final String title;
 
     SubjectsFor2TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor3TermBusinessIT {
+    PROGRAMMING_USING_DOT_NET ("Programming using .NET"),
+    MARKETING_AND_MARKETING_INFORMATION_SYSTEMS ("Marketing and marketing information systems"),
+    FINANCIAL_MATHEMATICS ("Financial mathematics"),
+    INSURANCE_MATHEMATICS ("Insurance Mathematics"),
+    INFORMATION_TECHNOLOGIES_ON_THE_INTERNET ("Information technologies on the Internet"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+
+    private final String title;
+
+    SubjectsFor3TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor4TermBusinessIT {
+    ECONOMETRICS ("Econometrics"),
+    PROGRAMMING_ON_THE_INTERNET_WITH_PHP_AND_MYSQL("Programming on the Internet with PHP and MySQL"),
+    DATABASES("Databases"),
+    ACCOUNTING_AND_ACCOUNTING_INFORMATION_SYSTEMS("Accounting and accounting information systems"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+
+    private final String title;
+
+    SubjectsFor4TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor5TermBusinessIT {
+    JAVA_PROGRAMMING ("JAVA programming"),
+    SOFTWARE_TECHNOLOGIES("Software technologies"),
+    INTRODUCTION_TO_CLOUD_TECHNOLOGIES("Introduction to Cloud Technologies"),
+    PRACTICE_IN_THE_SPECIALTY("Practice in the specialty"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+
+    private final String title;
+
+    SubjectsFor5TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermBusinessIT {
+    MODELING_AND_MANAGEMENT_OF_BUSINESS_PROCESSES ("Modeling and management of business processes"),
+    COMPUTER_NETWORKS_AND_COMMUNICATIONS("Computer networks and communications"),
+    INVESTMENTS_AND_INVESTMENT_TECHNIQUES("Investments and investment techniques"),
+    WEB_DESIGN("Web design"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+
+    private final String title;
+
+    SubjectsFor6TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermBusinessIT {
+    OPTIMIZATION_MODELS_IN_ECONOMICS ("Optimization models in economics"),
+    E_COMMERCE("E-commerce"),
+    INSURANCE_AND_INSURANCE_INFORMATION_SYSTEMS("Insurance and insurance information systems"),
+    BUSINESS_ENGLISH_WITH_INFORMATION_TECHNOLOGY("Business English with Information Technology"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+
+    private final String title;
+
+    SubjectsFor7TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermBusinessIT {
+    BUSINESS_INFORMATION_SYSTEMS ("Business information systems"),
+    ANALYSIS_OF_INVESTMENT_PROJECTS("Analysis of investment projects"),
+    EXCHANGE_OF_INVESTMENT_PROJECTS("Exchange and OTC trading"),
+    PUBLISHING_SYSTEMS("Publishing systems"),
+    BUSINESS_IT("Business IT"),
+    INTERNSHIP("Internship"),
+    OPTIONAL_DISCIPLINE("Optional discipline");
+
+    private final String title;
+
+    SubjectsFor8TermBusinessIT(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+// Subjects for Informatics
+
+enum SubjectsFor1TermInformatics {
+    INTRODUCTION_TO_COMPUTER_SCIENCE_C_PLUS_PLUS ("Introduction to Computer Science (C++)"),
+    LINEAR_ALGEBRA_AND_ANALYTICAL_GEOMETRY("Linear algebra and analytical geometry"),
+    ENGLISH("English"),
+    SPORTS("Sports"),
+    PROGRAMMING_C_PLUS_PLUS("Programming (C++)");
+
+    private final String title;
+
+    SubjectsFor1TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor2TermInformatics {
+    OPERATING_SYSTEMS ("Operating Systems"),
+    JAVA_PROGRAMMING("Java programming"),
+    MATHEMATICAL_ANALYSIS("Mathematical analysis"),
+    INFORMATION_TECHNOLOGY("Information Technology"),
+    SPECIALIZED_ENGLISH("Specialized English"),
+    SPORTS("Sports");
+
+    private final String title;
+
+    SubjectsFor2TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor3TermInformatics {
+    WEB_PROGRAMMING_HTML_CSS_JS ("Web Programming (HTML, CSS, JS)"),
+    MODELS_OF_REAL_PROCESSES ("Models of real processes"),
+    OOP_JAVA ("Object Oriented Programming (Java)"),
+    DATABASES("Databases"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+
+    private final String title;
+
+    SubjectsFor3TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor4TermInformatics {
+    COMPUTER_ARCHITECTURES ("Computer architectures"),
+    SOFTWARE_TECHNOLOGIES ("Software technologies"),
+    DISCRETE_MATH("Discrete math"),
+    PRACTICE_ON_OOP_AND_DB("Practice on OOP and DB"),
+    GEOMETRY("Geometry"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+
+    private final String title;
+
+    SubjectsFor4TermInformatics(String title) {
         this.title = title;
     }
 
