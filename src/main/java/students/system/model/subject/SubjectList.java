@@ -692,3 +692,392 @@ enum SubjectsFor4TermInformatics {
         return title;
     }
 }
+
+
+enum SubjectsFor5TermInformatics {
+    DISTRIBUTED_APPLICATIONS_C_SHARP ("Distributed Applications (C#)"),
+    ALGORITHMS_AND_DATA_STRUCTURES_C_SHARP ("Algorithms and Data Structures (C#)"),
+    COMPUTER_NETWORKS_AND_COMMUNICATIONS("Computer networks and communications"),
+    PRACTICE_IN_THE_SPECIALTY("Practice in the specialty"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor5TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermInformatics {
+    AI ("AI"),
+    DESIGN_PATTERNS ("Design Patterns"),
+    PRACTICE_ON_SOFTWARE_TECHNOLOGIES("Practice on software technologies"),
+    COMPUTER_GRAPHICS("Computer Graphics"),
+    PROBABILITY_AND_APPLIED_STATISTICS("Probability and Applied Statistics"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor6TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermInformatics {
+    WEB_SERVER_LANGUAGE ("Web server languages"),
+    COMPUTER_NUMERICAL_METHODS ("Computer Numerical Methods"),
+    TRANSLATION_METHODS("Translation methods"),
+    INFORMATION_MODELING_C_SHARP("Information Modeling (C#)"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor7TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermInformatics {
+    INTERNSHIP ("Internship"),
+    PROJECT_MANAGEMENT ("Project management"),
+    SOFTWARE_QA("Software Quality Assurance (QA)"),
+    COMPUTATIONAL_LINGUISTICS("Computational Linguistics"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1");
+    private final String title;
+
+    SubjectsFor8TermInformatics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+
+// Subjects for Mathematics
+
+enum SubjectsFor1TermMathematics {
+    LINEAR_ALGEBRA ("Linear algebra"),
+    PROGRAMMING ("Programming"),
+    MATHEMATICAL_ANALYSIS_1("Mathematical analysis 1"),
+    ENGLISH("English"),
+    SPORTS("Sports");
+    private final String title;
+
+    SubjectsFor1TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor2TermMathematics {
+    ANALYTICAL_GEOMETRY ("Analytical geometry"),
+    MATHEMATICAL_ANALYSIS_2 ("Mathematical analysis 2"),
+    OOP("Object oriented programming"),
+    OPERATING_SYSTEMS("Operating Systems"),
+    SPECIALIZED_ENGLISH("Specialized English"),
+    SPORTS("Sports");
+    private final String title;
+
+    SubjectsFor2TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+enum SubjectsFor3TermMathematics {
+    MATHEMATICAL_ANALYSIS_3 ("Mathematical analysis 3"),
+    DISCRETE_MATH ("Discrete math"),
+    IT ("Information Technology"),
+    ALGEBRA_1("Algebra 1"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+    private final String title;
+
+    SubjectsFor3TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor4TermMathematics {
+    MATHEMATICAL_ANALYSIS_4 ("Mathematical analysis 4"),
+    PROBABILITY_THEORY ("Probability theory"),
+    COMPLEX_ANALYSIS ("Complex analysis"),
+    ALGEBRA_2 ("Algebra 2"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+    private final String title;
+
+    SubjectsFor4TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor5TermMathematics {
+    FUNCTIONAL_ANALYSIS ("Functional analysis"),
+    MATHEMATICAL_STATISTICS ("Mathematical statistics"),
+    DISCRETE_GEOMETRY_STRUCTURES ("Discrete geometric structures"),
+    ORDINARY_DIFFERENTIAL_EQUATIONS ("Ordinary differential equations"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor5TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermMathematics {
+    PARTIAL_DIFFERENTIAL_EQUATIONS ("Partial differential equations"),
+    NUMERICAL_METHODS ("Numerical methods"),
+    DIFFERENTIAL_GEOMETRY ("Differential geometry"),
+    DATABASES ("Databases"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor6TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermMathematics {
+    MATHEMATICAL_OPTIMIZATION ("Mathematical optimization"),
+    LATEX_PUBLISHING_SYSTEM ("Latex publishing system"),
+    SYNTHETIC_GEOMETRY ("Synthetic geometry"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor7TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermMathematics {
+    GAME_THEORY ("Game theory"),
+    NUMBER_THEORY ("Number theory"),
+    OPTIONAL_DISCIPLINE ("Optional discipline");
+    private final String title;
+
+    SubjectsFor8TermMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+
+enum SubjectsFor1TermMathematicsInformaticsAndInformationTechnologies {
+    LINEAR_ALGEBRA ("Linear algebra"),
+    PROGRAMMING ("Programming"),
+    MATHEMATICAL_ANALYSIS_1 ("Mathematical analysis 1"),
+    INFORMATION_TECHNOLOGY ("Information Technology"),
+    ENGLISH ("English"),
+    SPORTS ("Sports"),;
+    private final String title;
+
+    SubjectsFor1TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor2TermMathematicsInformaticsAndInformationTechnologies {
+    ANALYTICAL_GEOMETRY ("Analytical geometry"),
+    INTRODUCTION_TO_WEB_PROGRAMMING ("Introduction to Web Programming"),
+    MATHEMATICAL_ANALYSIS_2 ("Mathematical analysis 2"),
+    OOP ("Object oriented programming"),
+    SPECIALIZED_ENGLISH ("Specialized English"),
+    SPORTS ("Sports"),;
+    private final String title;
+
+    SubjectsFor2TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor3TermMathematicsInformaticsAndInformationTechnologies {
+    ALGEBRA ("Algebra"),
+    DIFFERENTIAL_EQUATIONS ("Differential equations"),
+    ALGORITHMS_AND_DATA_STRUCTURES ("Algorithms and data structures"),
+    PROBABILITY_THEORY_AND_MATHEMATICAL_STATISTICS ("Probability theory and mathematical statistics"),
+    WEB_DESIGN ("Web design"),
+    ELECTIVE_DISCIPLINE ("Elective discipline"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor3TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor4TermMathematicsInformaticsAndInformationTechnologies {
+    GEOMETRY ("Geometry"),
+    COMPUTER_SYSTEMS_AND_COMMUNICATIONS ("Computer systems and communications"),
+    PSYCHOLOGY ("Psychology"),
+    DISCRETE_MATH ("Discrete math"),
+    OPERATING_SYSTEMS ("Operating Systems"),
+    ELECTIVE_DISCIPLINE ("Elective discipline"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor4TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor5TermMathematicsInformaticsAndInformationTechnologies {
+    INFORMATION_TECHNOLOGIES_IN_EDUCATION ("Information technologies in education"),
+    NUMERICAL_METHODS ("Numerical methods"),
+    COMPUTER_GRAPHICS_AND_PRESENTATIONS ("Computer graphics and presentations"),
+    PEDAGOGY ("Pedagogy"),
+    ALGEBRA_SCHOOL_COURSE ("Algebra school course"),
+    SCHOOL_COURSE_IN_ANALYSIS ("School course in analysis"),
+    METHODOLOGY_OF_TRAINING_IN_INFORMATICS_AND_INFORMATION_TECHNOLOGIES ("Methodology of training in informatics and information technologies"),
+    COMPULSORY_ELECTIVE_DISCIPLINE_NUMBER_1_FROM_GROUP_B ("Compulsory elective discipline #1 from group B");
+    private final String title;
+
+    SubjectsFor5TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermMathematicsInformaticsAndInformationTechnologies {
+    METHODS_FOR_SOLVING_MATHEMATICAL_PROBLEMS ("Methods for solving mathematical problems"),
+    SCHOOL_GEOMETRY_COURSE ("School geometry course"),
+    METHODOLOGY_OF_TEACHING_MATHEMATICS ("Methodology of teaching mathematics"),
+    COMPLEX_ANALYSIS ("Complex analysis"),
+    DATABASES ("Databases"),
+    COMPULSORY_ELECTIVE_DISCIPLINE_NUMBER_2_FROM_GROUP_B ("Compulsory elective discipline #2 from group B"),
+    COMPULSORY_ELECTIVE_DISCIPLINE_NUMBER_1_FROM_GROUP_A ("Compulsory elective discipline #1 from group A");
+    private final String title;
+
+    SubjectsFor6TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermMathematicsInformaticsAndInformationTechnologies {
+    MAIN_SPECIALIZED_DISCIPLINE ("Main specialized discipline \"Competence approach and innovations in education\""),
+    SCHOOL_COURSE_IN_INFORMATICS ("School course in informatics"),
+    SCHOOL_COURSE_IN_INFORMATION_TECHNOLOGY ("School course in information technology"),
+    EVENT_PROGRAMMING ("Event programming"),
+    INTEGRATED_PRACTICUM_IN_MATHEMATICS ("Integrated practicum in mathematics"),
+    INTEGRATED_PRACTICUM_IN_INFORMATICS_AND_INFORMATION_TECHNOLOGY ("Integrated practicum in informatics and information technology"),
+    DISCIPLINE_IN_MATHEMATICS ("Discipline in mathematics"),
+    DISCIPLINE_IN_INFORMATICS_AND_INFORMATION_TECHNOLOGIES ("Discipline in informatics and information technologies"),
+    INCLUSIVE_EDUCATION ("Inclusive education"),
+    CURRENT_PEDAGOGICAL_PRACTICE_IN_MATHEMATICS ("Current pedagogical practice in mathematics"),
+    CURRENT_PEDAGOGICAL_PRACTICE_IN_INFORMATICS_AND_INFORMATION_TECHNOLOGIES ("Current pedagogical practice in informatics and information technologies");
+    private final String title;
+
+    SubjectsFor7TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermMathematicsInformaticsAndInformationTechnologies {
+    INFORMATION_AND_COMMUNICATION_TECHNOLOGIES ("Information and communication technologies in learning and working in a digital environment"),
+    OPTIONAL_DISCIPLINE ("Optional discipline"),
+    COMPULSORY_ELECTIVE_DISCIPLINE_2_FROM_GROUP_A ("Compulsory elective discipline #2 from group A"),
+    INTERNSHIP_IN_MATHEMATICS ("Internship in mathematics"),
+    INTERNSHIP_PRACTICE_IN_INFORMATICS_AND_INFORMATION_TECHNOLOGIES ("Internship practice in informatics and information technologies");
+    private final String title;
+
+    SubjectsFor8TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
