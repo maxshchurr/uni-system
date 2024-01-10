@@ -1,6 +1,6 @@
 package students.system.model.student;
 
-public enum Specializations {
+public enum Specialization {
     SOFTWARE_TECHNOLOGIES_AND_DESIGN("Software technologies and design"),
     BUSINESS_IT("Business IT"),
     INFORMATICS("Informatics"),
@@ -13,7 +13,7 @@ public enum Specializations {
 
     private final String title;
 
-    Specializations(String title) {
+    Specialization(String title) {
         this.title = title;
     }
 

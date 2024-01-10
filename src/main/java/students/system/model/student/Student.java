@@ -6,10 +6,10 @@ public class Student {
     private String name;
     private String facultyNumber;
     private int course;
-    private String specialization;
+    private Specialization specialization;
     private Map<String, Integer> subjects;
 
-    public Student(String name, String facultyNumber, int course, String specialization, Map<String, Integer> subjects) {
+    public Student(String name, String facultyNumber, int course, Specialization specialization, Map<String, Integer> subjects) {
         this.name = name;
         this.facultyNumber = facultyNumber;
         this.course = course;
@@ -41,11 +41,11 @@ public class Student {
         this.course = course;
     }
 
-    public String getSpecialization() {
+    public Specialization getSpecialization() {
         return specialization;
     }
 
-    public void setSpecialization(String specialization) {
+    public void setSpecialization(Specialization specialization) {
         this.specialization = specialization;
     }
 

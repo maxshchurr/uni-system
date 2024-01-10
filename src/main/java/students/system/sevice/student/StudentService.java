@@ -1,6 +1,7 @@
 package students.system.sevice.student;
 
 import org.springframework.stereotype.Service;
+import students.system.exceptions.student.StudentNotFoundException;
 import students.system.model.student.Student;
 
 import java.util.ArrayList;
@@ -14,28 +15,32 @@ public class StudentService {
         return students;
     }
 
-
-    public Student getStudentByNumber(int number){
-        return null;
+    public Student getStudentByFacultyNumber(String facultyNumber) throws StudentNotFoundException {
+        return students.stream()
+                .filter(student -> student.getFacultyNumber().equals(facultyNumber))
+                .findFirst()
+                .orElseThrow(() -> new StudentNotFoundException("Student with faculty number:" + facultyNumber + "not found"));
     }
 
     public Student addStudent(Student student) {
-        return null;
+        students.add(student);
+
+        return student;
     }
 
-    public void deleteStudent(Student student){
-
+    public void deleteStudentByFacultyNumber(String facultyNumber) throws StudentNotFoundException {
+        students.remove(getStudentByFacultyNumber(facultyNumber));
     }
 
-    // stream.filter() NADO
-    public List<Student> getStudentsByFaculty(String faculty) {
-        return null;
+    public List<Student> getStudentsBySpecialization(String specialization) {
+        return students.stream()
+                .filter(student -> student.getSpecialization().getTitle().equals(specialization))
+                .toList();
     }
 
-    // stream.filter() NADO
     public List<Student> getStudentsByCourse(int course) {
-        return null;
+        return students.stream()
+                .filter(student -> student.getCourse() == course)
+                .toList();
     }
-
-
 }
