@@ -1,17 +1,15 @@
 package students.system.model.student;
 
-import students.system.model.subject.SubjectList;
-
-import java.util.List;
+import java.util.Map;
 
 public class Student {
     private String name;
     private String facultyNumber;
     private int course;
     private String specialization;
-    private SubjectList subjects;
+    private Map<String, Integer> subjects;
 
-    public Student(String name, String facultyNumber, int course, String specialization, SubjectList subjects) {
+    public Student(String name, String facultyNumber, int course, String specialization, Map<String, Integer> subjects) {
         this.name = name;
         this.facultyNumber = facultyNumber;
         this.course = course;
@@ -51,11 +49,11 @@ public class Student {
         this.specialization = specialization;
     }
 
-    public SubjectList getSubjects() {
+    public Map<String, Integer> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(SubjectList subjects) {
+    public void setSubjects(Map<String, Integer> subjects) {
         this.subjects = subjects;
     }
 }
