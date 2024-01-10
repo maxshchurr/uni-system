@@ -921,6 +921,7 @@ enum SubjectsFor8TermMathematics {
 }
 
 
+// Subjects for MathematicsInformaticsAndInformationTechnologies
 
 enum SubjectsFor1TermMathematicsInformaticsAndInformationTechnologies {
     LINEAR_ALGEBRA ("Linear algebra"),
@@ -1074,6 +1075,312 @@ enum SubjectsFor8TermMathematicsInformaticsAndInformationTechnologies {
     private final String title;
 
     SubjectsFor8TermMathematicsInformaticsAndInformationTechnologies(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+// Subjects for Applied Mathematics
+
+enum SubjectsFor1TermAppliedMathematics {
+    LINEAR_ALGEBRA ("Linear algebra"),
+    PROGRAMMING ("Programming"),
+    MATHEMATICAL_ANALYSIS_1 ("Mathematical analysis 1"),
+    ENGLISH ("English"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor1TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor2TermAppliedMathematics {
+    ANALYTICAL_GEOMETRY ("Analytical geometry"),
+    OPERATING_SYSTEMS ("Operating Systems"),
+    MATHEMATICAL_ANALYSIS_2 ("Mathematical analysis 2"),
+    OOP ("Object oriented programming"),
+    SPECIALIZED_ENGLISH ("Specialized English"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor2TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor3TermAppliedMathematics {
+    MATHEMATICAL_ANALYSIS_3 ("Mathematical analysis 3"),
+    DISCRETE_MATH ("Discrete math"),
+    IT ("Information Technology"),
+    ALGEBRA ("Algebra"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+    private final String title;
+
+    SubjectsFor3TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor4TermAppliedMathematics {
+    MATHEMATICAL_ANALYSIS_4 ("Mathematical analysis 4"),
+    COMPLEX_ANALYSIS ("Complex analysis"),
+    PROBABILITY_THEORY ("Probability theory"),
+    ALGORITHMS_AND_DATA_STRUCTURES ("Algorithms and data structures"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS("Sports");
+    private final String title;
+
+    SubjectsFor4TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor5TermAppliedMathematics {
+    FUNCTIONAL_ANALYSIS ("Functional analysis"),
+    MATHEMATICAL_STATISTICS ("Mathematical statistics"),
+    DISCRETE_GEOMETRIC_STRUCTURES ("Discrete geometric structures"),
+    ORDINARY_DIFFERENTIAL_EQUATIONS ("Ordinary differential equations"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor5TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermAppliedMathematics {
+    EQUATIONS_OF_MATHEMATICAL_PHYSICS ("Equations of mathematical physics"),
+    NUMERICAL_METHODS_1 ("Numerical methods 1"),
+    DIFFERENTIAL_GEOMETRY ("Differential geometry"),
+    DATABASES ("Databases"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor6TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermAppliedMathematics {
+    MATHEMATICAL_OPTIMIZATION ("Mathematical optimization"),
+    LATEX_PUBLISHING_SYSTEM ("Latex publishing system"),
+    NUMERICAL_METHODS_2 ("Numerical methods 2"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor7TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermAppliedMathematics {
+    GAME_THEORY ("Game theory"),
+    STATISTICAL_SOFTWARE ("Statistical software"),
+    OPTIONAL_DISCIPLINE ("Optional discipline");
+    private final String title;
+
+    SubjectsFor8TermAppliedMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+
+// Subjects for Business Mathematics
+
+enum SubjectsFor1TermBusinessMathematics {
+    LINEAR_ALGEBRA ("Linear algebra"),
+    PROGRAMMING ("Programming"),
+    MATHEMATICAL_ANALYSIS_1 ("Mathematical analysis 1"),
+    ENGLISH ("English"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor1TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor2TermBusinessMathematics {
+    ANALYTICAL_GEOMETRY ("Analytical geometry"),
+    SOFTWARE_SYSTEMS_IN_MATHEMATICS ("Software systems in mathematics"),
+    MATHEMATICAL_ANALYSIS_2 ("Mathematical analysis 2"),
+    OOP ("Object oriented programming"),
+    SPECIALIZED_ENGLISH ("Specialized English"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor2TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor3TermBusinessMathematics {
+    DISCRETE_MATH ("Discrete math"),
+    FINANCIAL_MATHEMATICS ("Financial mathematics"),
+    DIFFERENTIAL_EQUATIONS ("Differential equations"),
+    DATABASES ("Databases"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor3TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor4TermBusinessMathematics {
+    ECONOMETRICS ("Econometrics"),
+    INSURANCE_MATHEMATICS ("Insurance Mathematics"),
+    MATHEMATICAL_FOUNDATIONS_OF_MICROECONOMICS ("Mathematical foundations of microeconomics"),
+    PROBABILITY_THEORY ("Probability theory"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2"),
+    SPORTS ("Sports");
+    private final String title;
+
+    SubjectsFor4TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor5TermBusinessMathematics {
+    MARKETING_RESEARCHES ("Marketing researches"),
+    MATHEMATICAL_STATISTICS ("Mathematical statistics"),
+    MATHEMATICAL_FOUNDATIONS_OF_MICROECONOMICS ("Mathematical foundations of microeconomics"),
+    OPTIMIZATION_MODELS_IN_ECONOMICS ("Optimization models in economics"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor5TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor6TermBusinessMathematics {
+    COMPUTATIONAL_MATHEMATICS_1 ("Computational Mathematics 1"),
+    GAME_THEORY_AND_ECONOMICS_BEHAVIOR ("Game Theory and Economic Behavior"),
+    INVESTMENTS_AND_INVESTMENT_TECHNIQUES ("Investments and investment techniques"),
+    GRAPH_THEORY_IN_MANAGEMENT ("Graph theory in management"),
+    STATISTICAL_SOFTWARE ("Statistical software"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor6TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor7TermBusinessMathematics {
+    COMPUTATIONAL_MATHEMATICS_2 ("Computational Mathematics 2"),
+    EXCHANGE_AND_OTC_TRADING ("Exchange and OTC trading"),
+    LATEX_PUBLISHING_SYSTEM ("Latex publishing system"),
+    STATISTICAL_METHODS_FOR_DECISION_MAKING ("Statistical methods for decision making"),
+    OPTIONAL_DISCIPLINE_1 ("Optional discipline 1"),
+    OPTIONAL_DISCIPLINE_2 ("Optional discipline 2");
+    private final String title;
+
+    SubjectsFor7TermBusinessMathematics(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+
+
+enum SubjectsFor8TermBusinessMathematics {
+    ANALYSIS_OF_INVESTMENT_PROJECTS ("Analysis of investment projects"),
+    MATHEMATICAL_METHODS_IN_LOGISTICS ("Mathematical methods in logistics"),
+    BUSINESS_ENGLISH ("Business English"),
+    OPTIONAL_DISCIPLINE ("Optional discipline");
+    private final String title;
+
+    SubjectsFor8TermBusinessMathematics(String title) {
         this.title = title;
     }
 
