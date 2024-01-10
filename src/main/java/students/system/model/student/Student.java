@@ -4,17 +4,29 @@ import java.util.Map;
 
 public class Student {
     private String name;
+    private String surname;
     private String facultyNumber;
     private int course;
-    private Specialization specialization;
-    private Map<String, Integer> subjects;
+    private int term;
+    private String specialization;
+    private Map<String, Integer> subjectsToGrades;
 
-    public Student(String name, String facultyNumber, int course, Specialization specialization, Map<String, Integer> subjects) {
+    public Student(String name, String surname, String facultyNumber, int course, int term, String specialization, Map<String, Integer> subjectsToGrades) {
         this.name = name;
+        this.surname = surname;
         this.facultyNumber = facultyNumber;
         this.course = course;
+        this.term = term;
         this.specialization = specialization;
-        this.subjects = subjects;
+        this.subjectsToGrades = subjectsToGrades;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getName() {
@@ -41,20 +53,28 @@ public class Student {
         this.course = course;
     }
 
-    public Specialization getSpecialization() {
+    public int getTerm() {
+        return term;
+    }
+
+    public void setTerm(int term) {
+        this.term = term;
+    }
+
+    public String getSpecialization() {
         return specialization;
     }
 
-    public void setSpecialization(Specialization specialization) {
+    public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
 
-    public Map<String, Integer> getSubjects() {
-        return subjects;
+    public Map<String, Integer> getSubjectsToGrades() {
+        return subjectsToGrades;
     }
 
-    public void setSubjects(Map<String, Integer> subjects) {
-        this.subjects = subjects;
+    public void setSubjectsToGrades(Map<String, Integer> subjectsToGrades) {
+        this.subjectsToGrades = subjectsToGrades;
     }
 }
 

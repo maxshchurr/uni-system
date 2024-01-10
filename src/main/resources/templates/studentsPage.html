@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students page</title>
+</head>
+<body>
+<div class="container">
+    <table class="table table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Faculty number</th>
+            <th>Course</th>
+            <th>Term</th>
+            <th>Specialization</th>
+            <th>Subjects to grades</th>
+        </tr>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.getName()}"></td>
+            <td th:text="${student.getSurname()}"></td>
+            <td th:text="${student.getFacultyNumber()}"></td>
+            <td th:text="${student.getCourse()}"></td>
+            <td th:text="${student.getTerm()}"></td>
+            <td th:text="${student.getSpecialization()}"></td>
+            <td th:text="${student.getSubjectsToGrades()}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
