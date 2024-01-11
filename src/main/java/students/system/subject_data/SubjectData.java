@@ -4,7 +4,6 @@ import java.util.List;
 
 public class SubjectData {
     // Subjects for Software Engineering
-
     public static List<String> subjectsFor1TermSoftwareEngineering() {
         return List.of("Programming", "Web Programming 1", "Linear algebra and analytical geometry", "Sports", "English", "Object Oriented Programming 1 (Java)");
     }
@@ -103,4 +102,211 @@ public class SubjectData {
     public static List<String> subjectsFor8TermBusinessIT() {
         return List.of("Business information systems", "Analysis of investment projects", "Exchange and OTC trading", "Publishing systems", "Business IT", "Internship", "Optional discipline");
     }
+
+    // Subjects for Informatics
+
+    public static List<String> subjectsFor1TermInformatics() {
+        return List.of("Introduction to Computer Science (C++)", "Linear algebra and analytical geometry", "Programming (C++)", "English", "Sports");
+    }
+
+    public static List<String> subjectsFor2TermInformatics() {
+        return List.of("Operating Systems", "Java programming", "Mathematical analysis", "Information Technology", "Specialized English", "Sports");
+    }
+
+    public static List<String> subjectsFor3TermInformatics() {
+        return List.of("Web Programming (HTML, CSS, JS)", "Models of real processes", "Object Oriented Programming (Java)", "Databases", "Optional discipline 1", "Optional discipline 2", "Sports");
+    }
+
+    public static List<String> subjectsFor4TermInformatics() {
+        return List.of("Computer architectures", "Software technologies", "Discrete math", "Workshop on OOP and DB", "Geometry", "Optional discipline 1", "Optional discipline 2", "Sports");
+    }
+
+    public static List<String> subjectsFor5TermInformatics() {
+        return List.of("Distributed Applications (C#)", "Algorithms and Data Structures (C#)", "Computer networks and communications", "Practice in the specialty", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor6TermInformatics() {
+        return List.of("AI", "Design Patterns", "Practice on software technologies", "Computer Graphics", "Probability and Applied Statistics", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor7TermInformatics() {
+        return List.of("Web server languages", "Computer Numerical Methods", "Translation methods", "Information Modeling (C#)", "Optional discipline 1", "Optional discipline");
+    }
+
+    public static List<String> subjectsFor8TermInformatics() {
+        return List.of("Internship", "Project management", "Software Quality Assurance (QA)", "Computational Linguistics", "Optional discipline 1");
+    }
+
+    // Subjects for Mathematics
+
+    public static List<String> subjectsFor1TermMathematics() {
+        return List.of("Linear algebra", "Programming", "Mathematical analysis 1", "Sports", "English");
+    }
+
+    public static List<String> subjectsFor2TermMathematics() {
+        return List.of("Analytical geometry", "Object oriented programming", "Operating Systems", "Mathematical analysis 2", "Sports", "Specialized English");
+    }
+
+    public static List<String> subjectsFor3TermMathematics() {
+        return List.of("Algebra 1", "Discrete math", "Information Technology", "Mathematical analysis 3", "Sports", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor4TermMathematics() {
+        return List.of("Algebra 2", "Probability theory", "Complex analysis", "Mathematical analysis 4", "Sports", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor5TermMathematics() {
+        return List.of("Functional analysis", "Mathematical statistics", "Discrete geometric structures", "Ordinary differential equations", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor6TermMathematics() {
+        return List.of("Partial differential equations", "Numerical methods", "Differential geometry", "Databases", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor7TermMathematics() {
+        return List.of("Mathematical optimization", "Latex publishing system", "Synthetic geometry", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor8TermMathematics() {
+        return List.of("Game theory", "Number theory", "Optional discipline");
+    }
+
+    // Subjects for Mathematics, Informatics and Information Technologies
+
+    public static List<String> subjectsFor1TermMathematicsInformaticsAndIT() {
+        return List.of("Linear algebra", "Programming", "Mathematical analysis 1", "Information Technology", "Sports", "English");
+    }
+
+    public static List<String> subjectsFor2TermMathematicsInformaticsAndIT() {
+        return List.of("Analytical geometry", "Mathematical analysis 2", "Introduction to Web Programming", "Object oriented programming", "Sports", "Specialized English");
+    }
+
+    public static List<String> subjectsFor3TermMathematicsInformaticsAndIT() {
+        return List.of("Algebra", "Differential equations", "Algorithms and data structures", "Probability theory and mathematical statistics", "Web design", "Sports", "Elective discipline");
+    }
+
+    public static List<String> subjectsFor4TermMathematicsInformaticsAndIT() {
+        return List.of("Geometry", "Computer systems and communications", "Psychology", "Discrete math", "Operating Systems", "Sports", "Elective discipline");
+    }
+
+    public static List<String> subjectsFor5TermMathematicsInformaticsAndIT() {
+        return List.of("Information technologies in education", "Numerical methods", "Computer graphics and presentations", "Pedagogy", "Algebra school course", "School course in analysis", "Methodology of training in informatics and information technologies", "Compulsory elective discipline #1 from group B");
+    }
+
+    public static List<String> subjectsFor6TermMathematicsInformaticsAndIT() {
+        return List.of("Methods for solving mathematical problems", "School geometry course", "Methodology of teaching mathematics", "Complex analysis", "Databases", "Compulsory elective discipline #2 from group B" ,"Compulsory elective discipline #1 from group A");
+    }
+
+    public static List<String> subjectsFor7TermMathematicsInformaticsAndIT() {
+        return List.of("Main specialized discipline \"Competence approach and innovations in education\"", "School course in informatics", "School course in information technology", "Event programming", "Integrated practicum in mathematics", "Integrated practicum in informatics and information technology", "Nursing in mathematics", "Hospitalization in informatics and information technologies", "Inclusive education", "Current pedagogical practice in mathematics", "Current pedagogical practice in informatics and information technologies");
+    }
+
+    public static List<String> subjectsFor8TermMathematicsInformaticsAndIT() {
+        return List.of("Information and communication technologies in learning and working in a digital environment", "Optional discipline", "Compulsory elective discipline #2 from group A", "Internship in mathematics", "Internship practice in informatics and information technologies", "Practical-applied state exam in mathematics", "Practical-applied state exam in informatics and information technologies", "State exam or thesis defense");
+    }
+
+
+    // Subjects for Applied Mathematics
+
+    public static List<String> subjectsFor1TermAppliedMathematics() {
+        return List.of("Linear algebra", "Programming", "Mathematical analysis 1", "Sports", "English");
+    }
+
+    public static List<String> subjectsFor2TermAppliedMathematics() {
+        return List.of("Analytical geometry", "Object oriented programming", "Mathematical analysis 2", "Operating Systems", "Sports", "Specialized English");
+    }
+
+    public static List<String> subjectsFor3TermAppliedMathematics() {
+        return List.of("Discrete math", "Information Technology", "Mathematical analysis 3", "Algebra", "Sports", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor4TermAppliedMathematics() {
+        return List.of("Complex analysis", "Probability theory", "Mathematical analysis 4", "Algorithms and data structures", "Sports", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor5TermAppliedMathematics() {
+        return List.of("Functional analysis", "Mathematical statistics", "Discrete geometric structures", "Ordinary differential equations", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor6TermAppliedMathematics() {
+        return List.of("Equations of mathematical physics", "Numerical methods 1", "Differential geometry", "Databases", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor7TermAppliedMathematics() {
+        return List.of("Mathematical optimization", "Latex publishing system", "Numerical methods 2", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor8TermAppliedMathematics() {
+        return List.of("Game theory", "Statistical software", "Optional discipline");
+    }
+
+    // Subjects for Business Mathematics
+
+    public static List<String> subjectsFor1TermBusinessMathematics() {
+        return List.of("Linear algebra", "Programming", "Mathematical analysis 1", "Information Technology", "Sports", "English");
+    }
+
+    public static List<String> subjectsFor2TermBusinessMathematics() {
+        return List.of("Analytical geometry", "Software systems in mathematics", "Mathematical analysis 2", "Object oriented programming", "Sports", "Specialized English");
+    }
+
+    public static List<String> subjectsFor3TermBusinessMathematics() {
+        return List.of("Discrete math", "Financial mathematics", "Differential equations", "Databases", "Sports", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor4TermBusinessMathematics() {
+        return List.of("Econometrics", "Insurance Mathematics", "Mathematical foundations of microeconomics", "Probability theory", "Sports", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor5TermBusinessMathematics() {
+        return List.of("Marketing researches", "Mathematical statistics", "Mathematical foundations of macroeconomics", "Optimization models in economics", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor6TermBusinessMathematics() {
+        return List.of("Computational Mathematics 1", "Game Theory and Economic Behavior", "Investments and investment techniques", "Graph theory in management", "Statistical software", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor7TermBusinessMathematics() {
+        return List.of("Computational Mathematics 2", "Exchange and OTC trading", "Latex publishing system", "Optional discipline 1", "Optional discipline 2");
+    }
+
+    public static List<String> subjectsFor8TermBusinessMathematics() {
+        return List.of("Analysis of investment projects", "Mathematical methods in logistics", "Business English", "Optional discipline");
+    }
+
+    // Subjects for Information Technologies, Mathematics and Educational Management
+
+    public static List<String> subjectsFor1TermITMathematicsAndEducationalManagement() {
+        return List.of("Linear algebra", "Programming", "Mathematical analysis 1", "Information Technology", "English", "Sports");
+    }
+
+    public static List<String> subjectsFor2TermITMathematicsAndEducationalManagement() {
+        return List.of("Analytical geometry", "Introduction to Web Programming", "Mathematical analysis 2", "Object oriented programming", "Specialized English", "Sports");
+    }
+
+    public static List<String> subjectsFor3TermITMathematicsAndEducationalManagement() {
+        return List.of("Algebra", "Differential equations", "Algorithms and data structures", "Probability theory and mathematical statistics", "Web design", "Sports", "Elective discipline");
+    }
+
+    public static List<String> subjectsFor4TermITMathematicsAndEducationalManagement() {
+        return List.of("Geometry", "Introduction to Educational Management", "Psychology", "Discrete math", "Operating Systems", "Sports", "Elective discipline");
+    }
+
+    public static List<String> subjectsFor5TermITMathematicsAndEducationalManagement() {
+        return List.of("Information technologies in education", "Numerical methods", "Computer graphics and presentations", "Pedagogy", "Algebra school course", "School course in analysis", "Methodology of training in informatics and information technologies", "Compulsory elective discipline #1 from group B");
+    }
+
+    public static List<String> subjectsFor6TermITMathematicsAndEducationalManagement() {
+        return List.of("Financial management in school", "School geometry course", "Methodology of teaching mathematics", "Human resource management in school", "Planning and optimization of the learning process", "Databases", "Compulsory elective discipline #1 from group A", "Compulsory elective discipline No. 2 from group B");
+    }
+
+    public static List<String> subjectsFor7TermITMathematicsAndEducationalManagement() {
+        return List.of("Main specialized discipline \"Competence approach and innovations in education\"", "School course in informatics", "School course in information technology", "Electronic school (e-school)", "Project management and participation in educational programs", "Integrated practicum in mathematics", "Integrated practicum in informatics and information technology", "Nursing in mathematics", "Hospitalization in informatics and information technologies", "Inclusive education", "Current pedagogical practice in mathematics", "Current pedagogical practice in informatics and information technologies");
+    }
+
+    public static List<String> subjectsFor8TermITMathematicsAndEducationalManagement() {
+        return List.of("Information and communication technologies in learning and working in a digital environment", "Optional discipline", "Compulsory elective discipline #2 from group A", "Internship in mathematics", "Internship practice in informatics and information technologies", "Practical-applied state exam in mathematics", "Practical-applied state exam in informatics and information technologies", "State exam or thesis defense");
+    }
 }
+
+

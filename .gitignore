@@ -67,4 +67,3 @@ gradle-app.setting
 /gradlew
 /gradlew.bat
 /.idea/uiDesigner.xml
-/src/main/resources/templates/add_student.html
