@@ -14,8 +14,7 @@ public class SubjectService {
 
     public Map<String, Integer> getSubjectsBySpecializationAndTerm(int term, String specialization) {
         Map<String, Integer> subjectsToGrades = new HashMap<>();
-        String tmp = specialization.toUpperCase().replace(' ', '_');
-        Specialization valueOf = Specialization.valueOf(tmp);
+        Specialization valueOf = Specialization.valueOf(specialization.toUpperCase().replace(' ', '_'));
 
         switch (valueOf) {
             case SOFTWARE_ENGINEERING -> {
@@ -43,7 +42,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermSoftwareEngineering(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Software Engineering specialization!");
+                    throw new RuntimeException("No such term " + term + " for Software Engineering specialization!");
                 }
             }
             case SOFTWARE_TECHNOLOGIES_AND_DESIGN -> {
@@ -71,7 +70,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Software Technologies and Design specialization!");
+                    throw new RuntimeException("No such term " + term + " for Software Technologies and Design specialization!");
                 }
             }
             case BUSINESS_IT -> {
@@ -99,7 +98,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermBusinessIT(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Business IT specialization!");
+                    throw new RuntimeException("No such term " + term + " for Business IT specialization!");
                 }
             }
             case INFORMATICS -> {
@@ -127,7 +126,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermInformatics(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Informatics specialization!");
+                    throw new RuntimeException("No such term " + term + " for Informatics specialization!");
                 }
             }
             case MATHEMATICS -> {
@@ -155,7 +154,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermMathematics(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Mathematics specialization!");
+                    throw new RuntimeException("No such term " + term + " for Mathematics specialization!");
                 }
             }
             case MATHEMATICS_INFORMATICS_AND_INFORMATION_TECHNOLOGIES -> {
@@ -183,7 +182,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermMathematicsInformaticsAndIT(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Mathematics, Informatics and Information Technologies specialization!");
+                    throw new RuntimeException("No such term " + term + " for Mathematics, Informatics and Information Technologies specialization!");
                 }
             }
             case APPLIED_MATHEMATICS -> {
@@ -211,7 +210,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermAppliedMathematics(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Applied Mathematics specialization!");
+                    throw new RuntimeException("No such term " + term + " for Applied Mathematics specialization!");
                 }
             }
             case BUSINESS_MATHEMATICS -> {
@@ -239,7 +238,7 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermBusinessMathematics(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Business Mathematics specialization!");
+                    throw new RuntimeException("No such term " + term + " for Business Mathematics specialization!");
                 }
             }
             case INFORMATION_TECHNOLOGY_MATHEMATICS_AND_EDUCATIONAL_MANAGEMENT -> {
@@ -267,9 +266,10 @@ public class SubjectService {
                     fillSubjectsGradesWithValues(subjectsFor8TermITMathematicsAndEducationalManagement(), subjectsToGrades);
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + "for Information Technology, Mathematics and Educational Management specialization!");
+                    throw new RuntimeException("No such term " + term + " for Information Technology, Mathematics and Educational Management specialization!");
                 }
             }
+            default -> throw new RuntimeException("No such specialization: " + specialization);
         }
 
         return subjectsToGrades;

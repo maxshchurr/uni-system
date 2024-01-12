@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimate student page</title>
+</head>
+<body>
+<div class="container">
+    <form class="estimate-student" method="post" th:action="@{/estimateStudent}" th:object="${estimateRequest}">
+        <div th:text="${estimateRequest.getStudentName()}"></div>
+
+        <h1>Choose subject to estimate</h1>
+        <p>
+            <label for="subjectToEstimate">Subject:</label>
+            <select id="subjectToEstimate" th:field="*{subjectToEstimate}">
+                <option th:each="subject : ${estimateRequest.getSubjects()}"
+                        th:value="${subject}" th:text="${subject}"></option>
+            </select>
+        </p>
+        <p>
+            <label for="grade">Grade:</label>
+            <select id="grade" th:field="*{grade}">
+                <option th:value='1' th:text='1'></option>
+                <option th:value='2' th:text='2'></option>
+                <option th:value='3' th:text='3'></option>
+                <option th:value='4' th:text='4'></option>
+                <option th:value='5' th:text='5'></option>
+                <option th:value='6' th:text='6'></option>
+            </select>
+        </p>
+        <p>
+            <input type="text" class="form-control" placeholder="Name" required="" autofocus="" th:value="${estimateRequest.facultyNumber}" th:field="*{facultyNumber}" hidden>
+        </p>
+        <button type="submit">Estimate</button>
+        <a href="/studentsAll" class="button">Back</a>
+    </form>
+</div>
+</body>
+</html>

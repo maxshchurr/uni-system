@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create student</title>
+
+  <style>
+    a.button {
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+
+      text-decoration: none;
+      color: initial;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form class="create-student" method="post" th:action="@{/createStudent}" th:object="${studentToCreate}">
+    <h2 class="create-student">Please enter following information:</h2>
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" class="form-control" placeholder="Name" required="" autofocus="" th:field="*{name}">
+    </p>
+    <p>
+      <label for="surname">Surname:</label>
+      <input id="surname" class="form-control" placeholder="Surname" required="" th:field="*{surname}">
+    </p>
+    <p>
+      <label for="facultyNumber">Faculty number:</label>
+      <input id="facultyNumber" class="form-control" placeholder="Faculty number" required="" th:field="*{facultyNumber}">
+    </p>
+    <p>
+      <label for="course">Course:</label>
+      <select id="course" th:field="*{course}">
+        <option th:value='1' th:text='1'></option>
+        <option th:value='2' th:text='2'></option>
+        <option th:value='3' th:text='3'></option>
+        <option th:value='4' th:text='4'></option>
+      </select>
+    </p>
+    <p>
+      <label for="term">Term:</label>
+      <select id="term" th:field="*{term}">
+        <option th:value='1' th:text='1'></option>
+        <option th:value='2' th:text='2'></option>
+        <option th:value='3' th:text='3'></option>
+        <option th:value='4' th:text='4'></option>
+        <option th:value='5' th:text='5'></option>
+        <option th:value='6' th:text='6'></option>
+        <option th:value='7' th:text='7'></option>
+        <option th:value='8' th:text='8'></option>
+      </select>
+    </p>
+    <p>
+      <label for="specialization">Term:</label>
+      <select id="specialization" th:field="*{specialization}">
+        <option th:each="specilization : ${T(students.system.model.student.Specialization).values()}"
+                th:value="${specilization.getTitle()}" th:text="${specilization.getTitle()}"></option>
+      </select>
+    </p>
+    <button type="submit">Create</button>
+    <a href="/studentsAll" class="button">Back</a>
+  </form>
+</div>
+</body>
+</html>

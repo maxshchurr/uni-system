@@ -67,3 +67,7 @@ gradle-app.setting
 /gradlew
 /gradlew.bat
 /.idea/uiDesigner.xml
+/.idea/.name
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/vcs.xml

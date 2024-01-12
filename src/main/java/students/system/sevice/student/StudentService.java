@@ -26,7 +26,7 @@ public class StudentService {
         return students.stream()
                 .filter(student -> student.getFacultyNumber().equals(facultyNumber))
                 .findFirst()
-                .orElseThrow(() -> new StudentNotFoundException("Student with faculty number:" + facultyNumber + "not found"));
+                .orElseThrow(() -> new StudentNotFoundException("Student with faculty number: " + facultyNumber + "not found"));
     }
 
     public Student createStudent(Student student) {

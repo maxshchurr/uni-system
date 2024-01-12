@@ -11,14 +11,17 @@ public class Student {
     private String specialization;
     private Map<String, Integer> subjectsToGrades;
 
-    public Student(String name, String surname, String facultyNumber, int course, int term, String specialization, Map<String, Integer> subjectsToGrades) {
-        this.name = name;
-        this.surname = surname;
-        this.facultyNumber = facultyNumber;
-        this.course = course;
-        this.term = term;
-        this.specialization = specialization;
-        this.subjectsToGrades = subjectsToGrades;
+    public Student() {
+    }
+
+    public Student(Student student, Map<String, Integer> estimatedSubjectToGrades) {
+        name = student.getName();
+        surname = student.getSurname();
+        facultyNumber = student.getFacultyNumber();
+        course = student.getCourse();
+        term = student.getTerm();
+        specialization = student.getSpecialization();
+        subjectsToGrades = estimatedSubjectToGrades;
     }
 
     public String getSurname() {

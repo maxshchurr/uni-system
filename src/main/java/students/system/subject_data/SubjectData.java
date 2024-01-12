@@ -194,7 +194,7 @@ public class SubjectData {
     }
 
     public static List<String> subjectsFor6TermMathematicsInformaticsAndIT() {
-        return List.of("Methods for solving mathematical problems", "School geometry course", "Methodology of teaching mathematics", "Complex analysis", "Databases", "Compulsory elective discipline #2 from group B" ,"Compulsory elective discipline #1 from group A");
+        return List.of("Methods for solving mathematical problems", "School geometry course", "Methodology of teaching mathematics", "Complex analysis", "Databases", "Compulsory elective discipline #2 from group B", "Compulsory elective discipline #1 from group A");
     }
 
     public static List<String> subjectsFor7TermMathematicsInformaticsAndIT() {
