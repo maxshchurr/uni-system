@@ -1,7 +1,6 @@
 package students.system.sevice.student;
 
 import org.springframework.stereotype.Service;
-import students.system.exceptions.student.StudentNotFoundException;
 import students.system.model.student.Student;
 import students.system.model.subject.SubjectService;
 
@@ -22,11 +21,11 @@ public class StudentService {
         return students;
     }
 
-    public Student getStudentByFacultyNumberAndCourse(String facultyNumber, int course) throws StudentNotFoundException {
+    public Student getStudentByFacultyNumberAndCourse(String facultyNumber, int course) {
         return students.stream()
                 .filter(student -> student.getFacultyNumber().equals(facultyNumber) && student.getCourse() == course)
                 .findFirst()
-                .orElseThrow(() -> new StudentNotFoundException("Student with faculty number: " + facultyNumber + " not found"));
+                .orElseThrow(() -> new RuntimeException("Student with faculty number: " + facultyNumber + " not found"));
     }
 
     public List<Student> getStudentsByFacultyNumber(String facultyNumber) {
@@ -43,7 +42,7 @@ public class StudentService {
         students.add(student);
     }
 
-    public void deleteStudentByFacultyNumberAndCourse(String facultyNumber, int course) throws StudentNotFoundException {
+    public void deleteStudentByFacultyNumberAndCourse(String facultyNumber, int course) {
         students.remove(getStudentByFacultyNumberAndCourse(facultyNumber, course));
     }
 

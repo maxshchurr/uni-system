@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import students.system.exceptions.student.StudentNotFoundException;
 import students.system.model.intermidiate.AverageGradesRequest;
 import students.system.model.intermidiate.EstimateRequest;
 import students.system.model.intermidiate.StudentsCollection;
@@ -50,14 +49,14 @@ public class StudentsSubjectsController {
     }
 
     @PostMapping("/deleteStudent/{facultyNumber}/{course}")
-    public String deleteStudentByFacultyNumber(@PathVariable String facultyNumber, @PathVariable int course) throws StudentNotFoundException {
+    public String deleteStudentByFacultyNumber(@PathVariable String facultyNumber, @PathVariable int course) {
         studentService.deleteStudentByFacultyNumberAndCourse(facultyNumber, course);
 
         return "redirect:/studentsAll";
     }
 
     @GetMapping("/estimateStudentPage/{facultyNumber}/{course}")
-    public String estimateStudentPage(Model model, @PathVariable String facultyNumber, @PathVariable int course) throws StudentNotFoundException {
+    public String estimateStudentPage(Model model, @PathVariable String facultyNumber, @PathVariable int course) {
         Student student = studentService.getStudentByFacultyNumberAndCourse(facultyNumber, course);
 
         String studentName = student.getName() + " " + student.getSurname();
@@ -74,7 +73,7 @@ public class StudentsSubjectsController {
     }
 
     @PostMapping("/estimateStudent")
-    public String estimateStudent(@ModelAttribute("estimateRequest") EstimateRequest estimateRequest) throws StudentNotFoundException {
+    public String estimateStudent(@ModelAttribute("estimateRequest") EstimateRequest estimateRequest) {
         studentService.getStudentByFacultyNumberAndCourse(estimateRequest.getFacultyNumber(), estimateRequest.getCourse())
                 .getSubjectsToGrades()
                 .replace(estimateRequest.getSubjectToEstimate(), estimateRequest.getGrade());
@@ -83,7 +82,7 @@ public class StudentsSubjectsController {
     }
 
     @GetMapping("/editStudentPage/{facultyNumber}/{course}")
-    public String editStudentPage(@PathVariable String facultyNumber, @PathVariable int course, Model model) throws StudentNotFoundException {
+    public String editStudentPage(@PathVariable String facultyNumber, @PathVariable int course, Model model) {
         Student student = studentService.getStudentByFacultyNumberAndCourse(facultyNumber, course);
         model.addAttribute("studentToEdit", student);
 
@@ -91,7 +90,7 @@ public class StudentsSubjectsController {
     }
 
     @PostMapping("/editStudent")
-    public String editStudent(@ModelAttribute("studentToEdit") Student editedStudent) throws StudentNotFoundException {
+    public String editStudent(@ModelAttribute("studentToEdit") Student editedStudent) {
         List<Student> existingStudents = studentService.getStudentsByFacultyNumber(editedStudent.getFacultyNumber());
 
         Set<Integer> courses = existingStudents.stream()
