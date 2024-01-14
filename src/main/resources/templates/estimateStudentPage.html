@@ -31,6 +31,9 @@
         <p>
             <input type="text" class="form-control" placeholder="Name" required="" autofocus="" th:value="${estimateRequest.facultyNumber}" th:field="*{facultyNumber}" hidden>
         </p>
+        <p>
+            <input type="text" class="form-control" placeholder="Name" required="" autofocus="" th:value="${estimateRequest.course}" th:field="*{course}" hidden>
+        </p>
         <button type="submit">Estimate</button>
         <a href="/studentsAll" class="button">Back</a>
     </form>

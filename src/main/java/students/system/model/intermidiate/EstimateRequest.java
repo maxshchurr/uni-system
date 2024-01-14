@@ -5,13 +5,15 @@ import java.util.List;
 public class EstimateRequest {
     private String studentName;
     private String facultyNumber;
+    private int course;
     private List<String> subjects;
     private String subjectToEstimate;
     private int grade;
 
-    public EstimateRequest(String studentName, String facultyNumber, List<String> subjects) {
+    public EstimateRequest(String studentName, String facultyNumber, int course, List<String> subjects) {
         this.studentName = studentName;
         this.facultyNumber = facultyNumber;
+        this.course = course;
         this.subjects = subjects;
     }
 
@@ -29,6 +31,14 @@ public class EstimateRequest {
 
     public void setFacultyNumber(String facultyNumber) {
         this.facultyNumber = facultyNumber;
+    }
+
+    public int getCourse() {
+        return course;
+    }
+
+    public void setCourse(int course) {
+        this.course = course;
     }
 
     public List<String> getSubjects() {

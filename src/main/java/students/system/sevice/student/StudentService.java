@@ -22,36 +22,34 @@ public class StudentService {
         return students;
     }
 
-    public Student getStudentByFacultyNumber(String facultyNumber) throws StudentNotFoundException {
+    public Student getStudentByFacultyNumberAndCourse(String facultyNumber, int course) throws StudentNotFoundException {
+        return students.stream()
+                .filter(student -> student.getFacultyNumber().equals(facultyNumber) && student.getCourse() == course)
+                .findFirst()
+                .orElseThrow(() -> new StudentNotFoundException("Student with faculty number: " + facultyNumber + " not found"));
+    }
+
+    public List<Student> getStudentsByFacultyNumber(String facultyNumber) {
         return students.stream()
                 .filter(student -> student.getFacultyNumber().equals(facultyNumber))
-                .findFirst()
-                .orElseThrow(() -> new StudentNotFoundException("Student with faculty number: " + facultyNumber + "not found"));
-    }
-
-    public Student createStudent(Student student) {
-        student.setSubjectsToGrades(
-                subjectService.getSubjectsBySpecializationAndTerm(student.getTerm(), student.getSpecialization())
-        );
-
-        students.add(student);
-
-        return student;
-    }
-
-    public void deleteStudentByFacultyNumber(String facultyNumber) throws StudentNotFoundException {
-        students.remove(getStudentByFacultyNumber(facultyNumber));
-    }
-
-    public List<Student> getStudentsBySpecialization(String specialization) {
-        return students.stream()
-                .filter(student -> student.getSpecialization().equals(specialization))
                 .toList();
     }
 
-    public List<Student> getStudentsByCourse(int course) {
+    public void createStudent(Student student) {
+        student.setSubjectsToGrades(
+                subjectService.getSubjectsBySpecializationAndCourse(student.getCourse(), student.getSpecialization())
+        );
+
+        students.add(student);
+    }
+
+    public void deleteStudentByFacultyNumberAndCourse(String facultyNumber, int course) throws StudentNotFoundException {
+        students.remove(getStudentByFacultyNumberAndCourse(facultyNumber, course));
+    }
+
+    public List<Student> getStudentsBySpecializationAndCourse(String specialization, int course) {
         return students.stream()
-                .filter(student -> student.getCourse() == course)
+                .filter(student -> student.getSpecialization().equals(specialization) && student.getCourse() == course)
                 .toList();
     }
 }

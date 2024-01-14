@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit student</title>
+</head>
+<body>
+<div class="container">
+    <form class="edit-student" method="post" th:action="@{/editStudent}" th:object="${studentToEdit}">
+        <h2 class="edit-student">Please replace required information:</h2>
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-control" placeholder="Name" required="" autofocus=""
+                   th:value="${studentToEdit.name}" th:field="*{name}">
+        </p>
+        <p>
+            <label for="surname">Surname:</label>
+            <input id="surname" class="form-control" placeholder="Surname" required=""
+                   th:value="${studentToEdit.surname}" th:field="*{surname}">
+        </p>
+        <p>
+            <label for="facultyNumber">Faculty number:</label>
+            <input id="facultyNumber" class="form-control" placeholder="Faculty number" required=""
+                   th:value="${studentToEdit.facultyNumber}" th:field="*{facultyNumber}" readonly>
+        </p>
+        <p>
+            <label for="course">Course:</label>
+            <input id="course" class="form-control" placeholder="Course" required="" th:value="${studentToEdit.course}"
+                   th:field="*{course}">
+        </p>
+        <p>
+            <label for="specialization">Specialization:</label>
+            <input id="specialization" class="form-control" placeholder="Term" required="" th:value="${studentToEdit.specialization}"
+                   th:field="*{specialization}" readonly>
+        </p>
+        <button type="submit">Edit</button>
+        <a href="/studentsAll" class="button">Back</a>
+    </form>
+</div>
+</body>
+</html>

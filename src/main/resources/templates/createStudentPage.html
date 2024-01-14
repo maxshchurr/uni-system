@@ -41,19 +41,6 @@
       </select>
     </p>
     <p>
-      <label for="term">Term:</label>
-      <select id="term" th:field="*{term}">
-        <option th:value='1' th:text='1'></option>
-        <option th:value='2' th:text='2'></option>
-        <option th:value='3' th:text='3'></option>
-        <option th:value='4' th:text='4'></option>
-        <option th:value='5' th:text='5'></option>
-        <option th:value='6' th:text='6'></option>
-        <option th:value='7' th:text='7'></option>
-        <option th:value='8' th:text='8'></option>
-      </select>
-    </p>
-    <p>
       <label for="specialization">Term:</label>
       <select id="specialization" th:field="*{specialization}">
         <option th:each="specilization : ${T(students.system.model.student.Specialization).values()}"

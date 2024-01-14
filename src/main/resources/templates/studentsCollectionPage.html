@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Students page</title>
+    <title>Students collection</title>
 
     <style>
         .styled-table {
@@ -53,37 +53,22 @@
             <th>Course</th>
             <th>Specialization</th>
             <th>Subjects to grades</th>
-            <th></th>
-            <th></th>
-            <th></th>
         </tr>
-        <tr th:each="student : ${students}">
+        <tr th:each="student : ${studentCollection.getStudents()}">
             <td th:text="${student.getName()}"></td>
             <td th:text="${student.getSurname()}"></td>
             <td th:text="${student.getFacultyNumber()}" ></td>
             <td th:text="${student.getCourse()}"></td>
             <td th:text="${student.getSpecialization()}"></td>
             <td th:text="${student.getSubjectsToGrades()}"></td>
-            <td>
-                <form method="get" th:action="@{'estimateStudentPage/' + ${student.getFacultyNumber()} + '/' + ${student.getCourse()}}">
-                    <input type="submit" value="Estimate">
-                </form>
-            </td>
-            <td>
-                <form method="get" th:action="@{'editStudentPage/' + ${student.getFacultyNumber()} + '/' + ${student.getCourse()}}">
-                    <input type="submit" value="Edit">
-                </form>
-            </td>
-            <td>
-                <form method="post" th:action="@{'deleteStudent/' + ${student.getFacultyNumber()} + '/' + ${student.getCourse()}}">
-                    <input type="submit" value="Delete">
-                </form>
-            </td>
         </tr>
     </table>
 
-    <a href="/createStudentPage">Create student</a>
-    <a href="/getAverageGradesRequestPage">Calculate average value</a>
+    <label for="surname">Average value:</label>
+    <input id="surname" class="form-control" placeholder="Surname" required=""
+           th:value="${studentCollection.getAverageGrade()}" readonly>
+
+    <a href="/studentsAll">Back</a>
 </div>
 </body>
 </html>

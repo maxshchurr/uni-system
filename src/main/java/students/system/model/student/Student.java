@@ -7,7 +7,6 @@ public class Student {
     private String surname;
     private String facultyNumber;
     private int course;
-    private int term;
     private String specialization;
     private Map<String, Integer> subjectsToGrades;
 
@@ -19,7 +18,6 @@ public class Student {
         surname = student.getSurname();
         facultyNumber = student.getFacultyNumber();
         course = student.getCourse();
-        term = student.getTerm();
         specialization = student.getSpecialization();
         subjectsToGrades = estimatedSubjectToGrades;
     }
@@ -54,14 +52,6 @@ public class Student {
 
     public void setCourse(int course) {
         this.course = course;
-    }
-
-    public int getTerm() {
-        return term;
-    }
-
-    public void setTerm(int term) {
-        this.term = term;
     }
 
     public String getSpecialization() {

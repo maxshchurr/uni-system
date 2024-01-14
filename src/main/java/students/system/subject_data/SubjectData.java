@@ -4,20 +4,20 @@ import java.util.List;
 
 public class SubjectData {
     // Subjects for Software Engineering
-    public static List<String> subjectsFor1TermSoftwareEngineering() {
-        return List.of("Programming", "Web Programming 1", "Linear algebra and analytical geometry", "Sports", "English", "Object Oriented Programming 1 (Java)");
+    public static List<String> subjectsFor1CourseSoftwareEngineering() {
+        return List.of("Programming", "Web Programming 1", "Linear algebra and analytical geometry", "Sports", "English", "Object Oriented Programming 1 (Java)", "Algorithms and data structures", "Object Oriented Programming 2", "Mathematical analysis", "Discrete structures", "Specialized English");
     }
 
-    public static List<String> subjectsFor2TermSoftwareEngineering() {
-        return List.of("Algorithms and data structures", "Object Oriented Programming 2", "Mathematical analysis", "Sports", "Discrete structures", "Specialized English");
+    public static List<String> subjectsFor2CourseSoftwareEngineering() {
+        return List.of("Databases", "Introduction to Software Engineering", "Web programming 2", "Sports", "Operating systems and computer architectures", "Optional discipline 1", "Optional discipline 2", "Practice on OOP and DB", "Intelligent systems", "Computer graphics and GPI", "Distributed applications");
     }
 
     public static List<String> subjectsFor3TermSoftwareEngineering() {
-        return List.of("Databases", "Introduction to Software Engineering", "Web programming 2", "Sports", "Operating systems and computer architectures", "Optional discipline 1", "Optional discipline 2");
+        return List.of();
     }
 
     public static List<String> subjectsFor4TermSoftwareEngineering() {
-        return List.of("Practice on OOP and DB", "Intelligent systems", "Computer graphics and GPI", "Sports", "Distributed applications", "Optional discipline 1", "Optional discipline 2");
+        return List.of();
     }
 
     public static List<String> subjectsFor5TermSoftwareEngineering() {

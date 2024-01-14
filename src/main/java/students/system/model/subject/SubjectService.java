@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import students.system.model.student.Specialization;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static students.system.subject_data.SubjectData.*;
@@ -12,270 +11,158 @@ import static students.system.subject_data.SubjectData.*;
 @Service
 public class SubjectService {
 
-    public Map<String, Integer> getSubjectsBySpecializationAndTerm(int term, String specialization) {
+    public Map<String, Integer> getSubjectsBySpecializationAndCourse(int course, String specialization) {
         Map<String, Integer> subjectsToGrades = new HashMap<>();
-        Specialization valueOf = Specialization.valueOf(specialization.toUpperCase().replace(' ', '_'));
+        Specialization spec = Specialization.valueOf(specialization.toUpperCase().replace(' ', '_'));
 
-        switch (valueOf) {
+        switch (spec) {
             case SOFTWARE_ENGINEERING -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermSoftwareEngineering(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermSoftwareEngineering(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1CourseSoftwareEngineering().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2CourseSoftwareEngineering().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermSoftwareEngineering(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermSoftwareEngineering().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermSoftwareEngineering(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermSoftwareEngineering(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermSoftwareEngineering(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermSoftwareEngineering(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermSoftwareEngineering(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermSoftwareEngineering().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Software Engineering specialization!");
+                    throw new RuntimeException("No such term " + course + " for Software Engineering specialization!");
                 }
             }
             case SOFTWARE_TECHNOLOGIES_AND_DESIGN -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermSoftwareTechnologiesAndDesign().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermSoftwareTechnologiesAndDesign().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermSoftwareTechnologiesAndDesign().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermSoftwareTechnologiesAndDesign(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermSoftwareTechnologiesAndDesign().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Software Technologies and Design specialization!");
+                    throw new RuntimeException("No such term " + course + " for Software Technologies and Design specialization!");
                 }
             }
             case BUSINESS_IT -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermBusinessIT(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermBusinessIT(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermBusinessIT().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermBusinessIT().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermBusinessIT(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermBusinessIT().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermBusinessIT(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermBusinessIT(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermBusinessIT(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermBusinessIT(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermBusinessIT(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermBusinessIT().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Business IT specialization!");
+                    throw new RuntimeException("No such term " + course + " for Business IT specialization!");
                 }
             }
             case INFORMATICS -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermInformatics(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermInformatics(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermInformatics().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermInformatics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermInformatics(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermInformatics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermInformatics(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermInformatics(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermInformatics(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermInformatics(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermInformatics(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermInformatics().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Informatics specialization!");
+                    throw new RuntimeException("No such term " + course + " for Informatics specialization!");
                 }
             }
             case MATHEMATICS -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermMathematics(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermMathematics(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermMathematics().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermMathematics(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermMathematics(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermMathematics(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermMathematics(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermMathematics(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermMathematics(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Mathematics specialization!");
+                    throw new RuntimeException("No such term " + course + " for Mathematics specialization!");
                 }
             }
             case MATHEMATICS_INFORMATICS_AND_INFORMATION_TECHNOLOGIES -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermMathematicsInformaticsAndIT(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermMathematicsInformaticsAndIT(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermMathematicsInformaticsAndIT().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermMathematicsInformaticsAndIT().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermMathematicsInformaticsAndIT(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermMathematicsInformaticsAndIT().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermMathematicsInformaticsAndIT(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermMathematicsInformaticsAndIT(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermMathematicsInformaticsAndIT(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermMathematicsInformaticsAndIT(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermMathematicsInformaticsAndIT(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermMathematicsInformaticsAndIT().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Mathematics, Informatics and Information Technologies specialization!");
+                    throw new RuntimeException("No such term " + course + " for Mathematics, Informatics and Information Technologies specialization!");
                 }
             }
             case APPLIED_MATHEMATICS -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermAppliedMathematics(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermAppliedMathematics(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermAppliedMathematics().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermAppliedMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermAppliedMathematics(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermAppliedMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermAppliedMathematics(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermAppliedMathematics(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermAppliedMathematics(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermAppliedMathematics(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermAppliedMathematics(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermAppliedMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Applied Mathematics specialization!");
+                    throw new RuntimeException("No such term " + course + " for Applied Mathematics specialization!");
                 }
             }
             case BUSINESS_MATHEMATICS -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermBusinessMathematics(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermBusinessMathematics(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermBusinessMathematics().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermBusinessMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermBusinessMathematics(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermBusinessMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermBusinessMathematics(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermBusinessMathematics(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermBusinessMathematics(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermBusinessMathematics(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermBusinessMathematics(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermBusinessMathematics().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Business Mathematics specialization!");
+                    throw new RuntimeException("No such term " + course + " for Business Mathematics specialization!");
                 }
             }
             case INFORMATION_TECHNOLOGY_MATHEMATICS_AND_EDUCATIONAL_MANAGEMENT -> {
-                if (term == 1) {
-                    fillSubjectsGradesWithValues(subjectsFor1TermITMathematicsAndEducationalManagement(), subjectsToGrades);
-                } else if (term == 2) {
-                    fillSubjectsGradesWithValues(subjectsFor2TermITMathematicsAndEducationalManagement(), subjectsToGrades);
+                if (course == 1) {
+                    subjectsFor1TermITMathematicsAndEducationalManagement().forEach(it -> subjectsToGrades.put(it, null));
+                } else if (course == 2) {
+                    subjectsFor2TermITMathematicsAndEducationalManagement().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 3) {
-                    fillSubjectsGradesWithValues(subjectsFor3TermITMathematicsAndEducationalManagement(), subjectsToGrades);
+                else if (course == 3) {
+                    subjectsFor3TermITMathematicsAndEducationalManagement().forEach(it -> subjectsToGrades.put(it, null));
                 }
-                else if (term == 4) {
-                    fillSubjectsGradesWithValues(subjectsFor4TermITMathematicsAndEducationalManagement(), subjectsToGrades);
-                }
-                else if (term == 5) {
-                    fillSubjectsGradesWithValues(subjectsFor5TermITMathematicsAndEducationalManagement(), subjectsToGrades);
-                }
-                else if (term == 6) {
-                    fillSubjectsGradesWithValues(subjectsFor6TermITMathematicsAndEducationalManagement(), subjectsToGrades);
-                }
-                else if (term == 7) {
-                    fillSubjectsGradesWithValues(subjectsFor7TermITMathematicsAndEducationalManagement(), subjectsToGrades);
-                }
-                else if (term == 8) {
-                    fillSubjectsGradesWithValues(subjectsFor8TermITMathematicsAndEducationalManagement(), subjectsToGrades);
+                else if (course == 4) {
+                    subjectsFor4TermITMathematicsAndEducationalManagement().forEach(it -> subjectsToGrades.put(it, null));
                 }
                 else {
-                    throw new RuntimeException("No such term " + term + " for Information Technology, Mathematics and Educational Management specialization!");
+                    throw new RuntimeException("No such term " + course + " for Information Technology, Mathematics and Educational Management specialization!");
                 }
             }
             default -> throw new RuntimeException("No such specialization: " + specialization);
         }
 
         return subjectsToGrades;
-    }
-
-    private void fillSubjectsGradesWithValues(List<String> subjects, Map<String, Integer> subjectsToGrades) {
-        subjects.forEach(it -> subjectsToGrades.put(it, null));
     }
 }
