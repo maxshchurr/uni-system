@@ -6,9 +6,9 @@ import java.util.List;
 
 public class StudentsCollection {
     private List<Student> students;
-    private double averageGrade;
+    private String averageGrade;
 
-    public StudentsCollection(List<Student> students, double averageGrade) {
+    public StudentsCollection(List<Student> students, String averageGrade) {
         this.students = students;
         this.averageGrade = averageGrade;
     }
@@ -21,11 +21,11 @@ public class StudentsCollection {
         this.students = students;
     }
 
-    public double getAverageGrade() {
+    public String getAverageGrade() {
         return averageGrade;
     }
 
-    public void setAverageGrade(double averageGrade) {
+    public void setAverageGrade(String averageGrade) {
         this.averageGrade = averageGrade;
     }
 }

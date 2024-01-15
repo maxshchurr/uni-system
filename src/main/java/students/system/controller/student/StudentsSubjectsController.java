@@ -135,7 +135,7 @@ public class StudentsSubjectsController {
 
         double average = (double) sum / indexCounter;
 
-        model.addAttribute("studentCollection", new StudentsCollection(students, average));
+        model.addAttribute("studentCollection", new StudentsCollection(students, String.format("%.2f", average)));
         return "/studentsCollectionPage";
     }
 
